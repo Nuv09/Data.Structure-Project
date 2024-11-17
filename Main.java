@@ -19,7 +19,7 @@ public class Main {
     public static int menu()
     {
         System.out.println("1. Boolean Retrieval. ");
-         System.out.println("1. Boolean Retrieval. ");
+         System.out.println("1. Bool ean Retrieval. ");
         System.out.println("2. Ranked Retrieval.");
         System.out.println("3. Indexed Documents.");
         System.out.println("4. Indexed Tokens.");
