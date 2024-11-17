@@ -12,7 +12,7 @@ public class AVLTree<K extends Comparable<K>, T>{
 
         /*==================================================================
             class BSTMapNode
-            /*test2 wala */
+            /*test2 wala *
         ==================================================================*/
         class AVLNode<K extends Comparable<K>, T> {
                 public K key;
