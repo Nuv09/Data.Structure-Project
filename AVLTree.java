@@ -9,9 +9,10 @@ public class AVLTree<K extends Comparable<K>, T>{
 /*Latefa */
 /* Nouf */
 /*walaa11 */
-/*test2 wala */
+
         /*==================================================================
             class BSTMapNode
+            /*test2 wala */
         ==================================================================*/
         class AVLNode<K extends Comparable<K>, T> {
                 public K key;
