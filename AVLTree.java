@@ -1,17 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package dsproject;
-
 import java.util.NoSuchElementException;
 
-/*test Nouf */
-/*test 2 */
+/**
+ *
+ * @author Manal Alhihi
+ */
 public class AVLTree<K extends Comparable<K>, T>{
-
-
-        
 
         /*==================================================================
             class BSTMapNode
@@ -326,7 +319,6 @@ public class AVLTree<K extends Comparable<K>, T>{
         } // end while (p != null) 
         return false;
     }
-
        //============================================================================
        public void Traverse()
         {
@@ -344,8 +336,7 @@ public class AVLTree<K extends Comparable<K>, T>{
             
         }
 
-        
-       //=========================================================================== 
+        //=========================================================================== 
        public void TraverseT()
         {
             if (root != null)
@@ -360,7 +351,7 @@ public class AVLTree<K extends Comparable<K>, T>{
             if (node.getData() instanceof AVLTree )
             {
                 System.out.println( "Node key ==== "+ node.key);
-             //   ((AVLTree <String,Rank>) node.getData()).Traverse();
+                ((AVLTree <String,Term>) node.getData()).Traverse();
             }
             else
                 System.out.println(node.data);
@@ -369,4 +360,37 @@ public class AVLTree<K extends Comparable<K>, T>{
             
         }
 
+//=========================================================================== 
+        public LinkedList <T> getData()
+        {
+            LinkedList <T> data = new LinkedList <T>();
+            if (root != null)
+                getDataT(root, data);
+            return data;
+        }
+        private void getDataT (AVLNode<K,T> node , LinkedList <T> data )
+        {
+            if (node == null)
+                return;
+            getDataT( node.left ,data );
+            data.insert(node.data);
+            getDataT( node.right, data);
+        }
+       
+//=========================================================================== 
+        public LinkedList <K> getKeys()
+        {
+            LinkedList <K> keys = new LinkedList <K>();
+            if (root != null)
+                getKeysT(root, keys);
+            return keys;
+        }
+        private void getKeysT (AVLNode<K,T> node , LinkedList <K> keys )
+        {
+            if (node == null)
+                return;
+            getKeysT( node.left ,keys );
+            keys.insert(node.key);
+            getKeysT( node.right, keys);
+        }
 }
